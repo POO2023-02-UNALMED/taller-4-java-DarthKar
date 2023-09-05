@@ -1,11 +1,13 @@
 package classroom;
 
-public enum Tipo {
-	DISCIPLINAR(10),FUNDAMENTACION(20),ELECTIVA(30);
-	
+public class Tipo {	
+	public static final Tipo DISCIPLINAR = new Tipo(10, "Disciplinar");
+	public static final Tipo FUNDAMENTACION = new Tipo(20, "Fundamentacion");
+	public static final Tipo ELECTIVA = new Tipo(30, "Electiva");
+		
 	private int codigo;
 	private String nombre;
-	public Tipo(int codigo,String nombre) {
+	private Tipo(int codigo,String nombre) {
 		this.codigo = codigo;
 		this.nombre = nombre;
 	}
